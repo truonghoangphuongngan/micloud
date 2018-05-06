@@ -313,7 +313,7 @@ function follow_friend($username_friend, $userID){
         
         }   
     }
-    
+    dsads
    
     if(empty($result['follow'])){
         $friend = $username_friend;
@@ -341,5 +341,4 @@ function follow_friend($username_friend, $userID){
     ";
     mysqli_query($conn, $sql);
 }
-
 ?>
