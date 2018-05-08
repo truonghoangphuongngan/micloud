@@ -139,6 +139,9 @@ function get_content($command,$quantity){
         case 'search_user':
         $query = mysqli_query($conn, "SELECT * FROM `users` 
             WHERE users.username like '%$quantity%' or users.email like '%$quantity%' ");
+        case 'post_user_following':
+        $query = mysqli_query($conn, "SELECT * FROM `posts` WHERE userID IN ($quantity) ORDER BY created DESC");
+            break;
         break;
 
         default:
@@ -341,4 +344,32 @@ function follow_friend($username_friend, $userID){
     ";
     mysqli_query($conn, $sql);
 }
+/* bebe */
+function stringToArray($string){
+    // ví dụ $string = "be,mi,nguyen"
+    return explode(',', $string);
+}
+
+function arrayToString ($array){
+    $str="";
+    foreach ($array as  $value) {
+        $str += $value."," ;
+    }
+    return $str;
+}
+
+function get_post_following($userID){
+    global $conn;
+    connect_db();
+    $query = mysqli_query($conn, "SELECT `follow` FROM `users` WHERE users.userID = $userID");
+    $result = array();
+    if ($query){
+            if (mysqli_num_rows($query) != 0){
+                $result= mysqli_fetch_assoc($query);
+            }   
+        }
+    $listFriend =  $result['follow'];
+    return get_content("post_user_following",$listFriend);
+}
+
 ?>
