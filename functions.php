@@ -174,7 +174,7 @@ function get_user_avatar($userID=null){
     $user = get_content('userbyID',$userID);
     $avatar = $user[0]['avatar'];
 
-    echo '<img src="images/upload/'.$avatar.'" alt="avatar"/>';
+    echo $avatar;
 }
 
 //update thông tin user

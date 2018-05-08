@@ -3,7 +3,7 @@ SESSION_START();
 include_once("functions.php");
 include_once("link-ref.php");
 
-if (!empty($_POST['submit_search']))
+if (!empty($_GET['submit_search']))
 {
 	//Lấy dữ liệu nhập vào
 	$data['search'] = $_POST['search'];
@@ -23,7 +23,7 @@ if (!empty($_POST['submit_search']))
     <title>Document</title>
 </head>
 <body>
-<?php include_once("header.php");?>
+<?php include_once("bootrap.php");?>
 <?php 
   foreach($result as $r){
         $html='';

@@ -25,12 +25,10 @@ include_once("link-ref.php");
 }
 .flex-container > div{
    
-    margin: 0px 120px 0px 120px;
+    margin: 0px 120px;
     width: 50px;
-    font-size: 20px;
-    text-align: center;
-    background-color: brown;
-    justify-content: center;
+  
+   
 }
 
 
@@ -38,15 +36,17 @@ include_once("link-ref.php");
 .container-1{
     display: flex;
     width: 200px;
-    vertical-align: middle;
+    height: 70px;
+
+    padding: 0px 70px;
+
     white-space: nowrap;
-    position: relative;
+   
     justify-content: center;
 }
 
 .container-1 .icon{
     position: absolute;
-    
     
     margin-top: 5px;
 
@@ -95,29 +95,34 @@ include_once("link-ref.php");
 .container-1 >div{
   
     margin: 10px 10px;
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
-    background-color: rgb(42, 165, 108);
+  
     justify-content: center;
 }
 
 .container-1 #image{
     
     margin: 10px 10px;
-    width: 60px;
-    height: 50px;
-    background-color: rgb(54, 42, 165);
+    width: 50px;
+    height: 40px;
+  
     justify-content: center;
     text-align: center;
 }
 
 .container-1 .img_head{
-
+    margin-top: 20px;
+    margin-bottom:20px;
     margin: 10px 10px;
     justify-content: center;
     text-align: center;
-    background-color: rgb(54, 42, 165);
+ 
 
+}
+.container-1 .form{
+    margin-top: 20px;
+    margin-bottom:20px;
 }
 
 
@@ -125,19 +130,20 @@ include_once("link-ref.php");
 <body>
     <div class="flex-container">
         <div class="container-1">
-            <img src="icon.png" id="image" alt="Logo Micloud" width="40" height="40">
+            <img src="icon.png" id="image" alt="Logo Micloud" width="30" height="30">
             <div>Micloud</div>
         </div>
      
         <div class="container-1">
             <form class="form" action="result_search.php" method="post">
-                <input type="submit" id="submit_search" name="submit_search" class="fa fa-search">
+                
                 <input type="text" id="search" name="search" placeholder="Search..." />
+                <input type="submit" id="submit_search" name="submit_search" value="search" class="fa fa-search">
             </form>
         </div>
        
         <div class="container-1">
-                <img src="images/messenger.png" class="img_head" alt="Logo Micloud" width="30" height="30">
+                
                 <img src="images/ring.png" class="img_head" alt="Logo Micloud" width="30" height="30">
                 <img src="images/user.png" class="img_head" alt="Logo Micloud" width="30" height="30">
 
@@ -145,5 +151,6 @@ include_once("link-ref.php");
        
 
     </div>
+    
 </body>
 </html>

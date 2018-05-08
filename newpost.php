@@ -30,6 +30,12 @@ disconnect_db();
     <title>Document</title>
 </head>
 <body>
+
+<?php include_once("bootrap.php");?>
+<br>
+
+<div class="container">
+<div class="card bg-light text-dark">
 <form class="form-horizontal" method="post" enctype = "multipart/form-data">
 	<!-- Mô tả -->
   <div class="form-group">
@@ -56,9 +62,12 @@ disconnect_db();
 <!-- SUBMIT -->
   <div class="form-group"> 
     <div class="col-sm-offset-2 col-sm-10">
-      <input type="submit" class="btn btn-primary" value="Đăng" name="new_post">
+      <input type="submit" class="btn btn-outline-danger" value="Đăng" name="new_post">
     </div>
   </div>
 </form>
+
+</div>
+</div>
 </body>
 </html>
