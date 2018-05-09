@@ -1,38 +1,27 @@
 <?php
 SESSION_START();
 include_once("functions.php");
-include_once("link-ref.php");
 
-if (!empty($_GET['submit_search']))
-{
+
+
+
+?>
+
+<?php get_header();?>
+
+<?php
+if (!empty($_GET['search'])) {
 	//Lấy dữ liệu nhập vào
-	$data['search'] = $_POST['search'];
+	$data = $_GET['search'];
 
 	//search user
-   $result =  get_content('search_user',$data['search']);   
+    $kq = search_user( $data );
+	if($kq != false){
+	    echo $kq;
+    } else {
+	    echo "Khong tim thay!";
+    }
 }
-
-
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<?php include_once("bootrap.php");?>
-<?php 
-  foreach($result as $r){
-        $html='';
-        $username = $r['username'];
-        $userID = $r['userID']; 
-        $html .= '<a href="friend.php?userID='.$userID.'">'.$username.'</a></br>';
-        echo $html;
-  }
-?>
-    
-</body>
-</html>
+
+<?php get_footer();?>

@@ -1,148 +1,144 @@
-<?php 
+<?php
 SESSION_START();
-include_once("functions.php");
-include_once("link-ref.php");
+include_once( "functions.php" );
 
-if(isset($_SESSION['userID'])){
-    $username = $_SESSION['username'];
-    $userID = $_SESSION['userID'];
+/**
+ * GET USER DATA
+ */
+// Neu ko lay duoc username
+$username  = '';
+$user_id   = 0;
+$is_friend = false;
+if ( ! isset( $_GET['username'] ) ) {
 
-    $baipost = get_content('postuser',$userID);
-    $user = get_content('userbyID',$userID);
-    mi_print($user);
-    
-}else{
-    header("location:login.php");
+	// Tra ve trang ca nhan cua minh
+	$username = $_SESSION['username'];
+	$user_id  = $_SESSION['userID'];
+
+} else {
+	// tra ve trang cua username
+
+	$is_friend = true;
+
+	$username = $_GET['username'];
+
+	$user_data = get_content( 'user_by_username', $username );
+
+	$user_id = $user_data[0]['userID'];
 }
 
+$posts = get_content( 'postuser', $user_id );
+
+/**
+ * FOLLOW FUNCTION
+ */
+// Neu nhan duoc ten follow
+if( isset( $_POST['follow'] )){
+    $user_follow = $_POST['follow'];
+	follow_friend($user_follow);
+}
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Micloud | Login</title>
-    <?php include_once("link-ref.php");?>
-</head>
-<style>
-.main{
-    display: flex;
-    background-color: red;
-    justify-content: center;
-}
-.main1{
-    display: flex;
-    background-color: blue;
-    justify-content: center;
-}
-.main2{
-    
-    background-color: pink;
-    justify-content: center;
-}
-.main3{
-    display: flex;
-    background-color: pink;
-    justify-content: center;
-    
-}
 
-.ava img{
-    width: 200px;
-    height: 500px;
-    padding: 30px;
-}
-</style>
-<body>
-    <?php include_once("bootrap.php");?>
+<?php get_header(); ?>
 
-<div>
+
     <!-- thông tin-->
-<div class="container">
     <div class="card-group">
+
         <!--avatar-->
         <div class="card bg-light text-dark">
-        
+
             <div class="card-body text-center">
                 <div class="card" style="width:30%" title="Thay đổi ảnh đại diện">
-                    <img class="card-img-top" src="images/upload/<?php get_user_avatar(); ?>" alt="Card image">
-                    
-                </div>
- 
-            </div> 
-        </div>
-        <!-- end avatar-->
-
-        <div class="card bg-light text-dark">
-            <div class="card-body text-center">
-                <div class="card-body">
-                        <div> <h2> <?php echo $username; ?></h2></div>
-                        <div><a href="edituser.php">Chỉnh sửa thông tin</a></div>
-                        
-                        <div><a href="logout.php" class="btn btn-outline-danger">Đăng Xuất</a></div>
+                    <img class="card-img-top" src="<?php echo get_link_avatar( $user_id ); ?>" alt="Card image">
                 </div>
             </div>
         </div>
-    
+        <!-- end avatar-->
+
+        <!-- Chinh sua thong tin -->
+        <div class="card bg-light text-dark">
+            <div class="card-body text-center">
+                <div class="card-body">
+                    <div><h2> <?php echo $username; ?></h2></div>
+					<?php if ( ! $is_friend ): ?>
+                        <div><a href="edituser.php">Chỉnh sửa thông tin</a></div>
+                        <div><a href="logout.php" class="btn btn-outline-danger">Đăng Xuất</a></div>
+					<?php endif; ?>
+
+					<?php if ( $is_friend ): ?>
+                        <form action="" method="post">
+                            <input class="hidden" name="follow" value="<?php echo $username; ?>" />
+                            <button type="submit" class="btn btn-outline-danger">Theo dõi</button>
+                        </form>
+					<?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <!-- END Chinh sua thong tin -->
+
     </div>
-</div>
     <!--end thông tin-->
-<div class="container"
+
+<?php if ( ! $is_friend ): ?>
     <div class="card-group">
         <div class="card bg-light text-dark">
-        <div class="card-body text-center">
-            <div><a href="newpost.php">Đăng bài</a></div>
-        </div>
+            <div class="card-body text-center">
+                <div><a href="newpost.php">Đăng bài</a></div>
+            </div>
         </div>
     </div>
-</div>
+<?php endif; ?>
 
 
-<?php
+    <!-- Danh sach post -->
+    <div class="row">
+		<?php foreach ( $posts as $post ): ?>
 
-$html="";
-foreach($baipost as $post){
-    $img = $post['photo'];
-    $mota = $post['description'];
-    $html .= '<div><img src="images/upload/'.$img.'" alt="'.$mota.'" /></div>';
-}
+            <div class="col-lg-4 col-md-6 col-sm-12 post-item">
+                <div class="photo-wrapper"
+                     style="background-image: url(<?php echo get_link_photo( $post['photo'] ); ?>)"
+                     data-toggle="modal" data-target="#post-<?php echo $post['postID']; ?>">
+                    <img src="<?php echo get_link_photo( $post['photo'] ); ?>" alt="" class="post-photo"/>
+                </div>
+            </div>
 
-?>
+            <!-- The Modal -->
+            <div class="modal fade" id="post-<?php echo $post['postID']; ?>">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
 
-<!-- bài post new-->
-<div class="container">
-  <h2>Image Gallery</h2>
-  <p>Click on the images to enlarge them.</p>
-  <div class="row">
-    <div class="col-md-4">
-      <div class="thumbnail">
-        <a href="/w3images/lights.jpg" target="_blank">
-          <img src="images/upload/<?php echo $html;?>" alt="Lights" style="width:200%">
-         
-        </a>
-      </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                            <div class="row">
+
+                                <!-- Photo -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <img src="<?php echo get_link_photo( $post['photo'] ); ?>" width="100%"/>
+                                </div>
+
+                                <!-- Caption -->
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+									<?php echo $post['description']; ?>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+		<?php endforeach; ?>
     </div>
-    
-    
-  </div>
-</div>
+    <!-- END Danh sach post -->
 
-
-<?php
-
-$html="";
-foreach($baipost as $post){
-    $img = $post['photo'];
-    $mota = $post['description'];
-    $html .= '<div><img src="images/upload/'.$img.'" alt="'.$mota.'" /></div>';
-}
-echo $html;
-?>
-
-
-</div>
-
-</body>
-</html>
+<?php get_footer(); ?>

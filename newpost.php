@@ -31,7 +31,7 @@ disconnect_db();
 </head>
 <body>
 
-<?php include_once("bootrap.php");?>
+<?php get_header();?>
 <br>
 
 <div class="container">

@@ -28,7 +28,7 @@ if(!empty($_POST['follow'])){
 <body>
 <?php include_once("header.php");?>
 <div>
-    <?php get_user_avatar($user_friend_ID);?>
+    <?php get_link_avatar($user_friend_ID);?>
     <div><h2><?php echo $username_friend; ?></h2></div>
     <div>
         <form action="" method="post">

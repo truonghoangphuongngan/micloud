@@ -56,7 +56,7 @@ if(isset($_SESSION['userID'])){
 </head>
 <body>
 <!-- header-->
-<?php include_once("bootrap.php");?>
+<?php get_header();?>
 <!--end header-->
 
 <br>
@@ -68,7 +68,7 @@ if(isset($_SESSION['userID'])){
         <div class="form-group">
           <div class="card-body text-center">
                 <div class="card" style="width:30%" title="Thay đổi ảnh đại diện">
-                    <img class="card-img-top" src="images/upload/<?php get_user_avatar(); ?>" alt="Card image">
+                    <img class="card-img-top" src="images/upload/<?php get_link_avatar(); ?>" alt="Card image">
                     
                 </div>
  
