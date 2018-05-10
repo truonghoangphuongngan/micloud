@@ -400,6 +400,7 @@ function arrayToString( $array ) {
 	return $str;
 }
 
+// hàm lấy tất cả các bài post của user mình theo dõi
 function get_post_following( $userID ) {
 	global $conn;
 	connect_db();
@@ -413,6 +414,12 @@ function get_post_following( $userID ) {
 	$listFriend = $result['follow'];
 
 	return get_content( "post_user_following", $listFriend );
+}
+
+// hàm insert comment vào 1 bài post
+
+function insert_comment(){
+	
 }
 
 // Hàm lấy header
