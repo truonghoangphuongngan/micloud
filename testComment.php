@@ -1,7 +1,5 @@
 <?php
-include_once("functions.php");
-if (!empty($_POST['logup']))
-{
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +18,7 @@ if (!empty($_POST['logup']))
 <div class="container">
   
   <!-- Comments content -->
-  <div class="media border p-3">
+  <div class="media border p-3" id="idPostContent">
   	<!-- Owers description -->
     <img src="images/user.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:40px;">
     <div class="media-body">
@@ -43,10 +41,10 @@ if (!empty($_POST['logup']))
       	</div>
       </div>
        <!-- End orther comment -->
-      <form action="" method="POST" name="request-Comment">
+      <form action="" method="POST" name="request-Comment" id="1">
       <div class="form-group media p-3">
-		  	<input type="text" name="comment" placeholder="write comment" class="form-control">
-		  	<button type="submit" class="btn btn-outline-info">Post</button>
+		  	<input type="text" id="comment" placeholder="write comment" class="form-control">
+		  	<button id= "insertItem" type="submit" class="btn btn-outline-info">Post</button>
 		</div>
 	</form>
      <!-- End of form post comment-->
@@ -60,19 +58,38 @@ if (!empty($_POST['logup']))
 <script type="text/javascript">
 	 // submit insert defect
      $('#insertItem').on('click', function() {
-
+      var $idPostContent = $(this).parent().parent().parent().attr('id');
+      var $idPost = $(this).parent().parent('form').attr('id'); // id bài viết gắn vào form
+      var $commentValue = $('#comment').val(); //nội dung bình luận
+      var $idUser = '1'; // chưa get id user
+        alert('as');
          // insert defect header
            $.ajax({
                 dataType: "html",
                 method: "POST",
+                url:"process.php",
                 evalScripts: true,
-                url: "",
-                data: ({}),
+                data: ({
+                  'insert-comment':'',
+                  'idUser':$idUser,
+                  'comment':$commentValue,
+                  'idPost':$idPost
+                }),
                 success: function (data, textStatus) {
-                   // alert(data);
+                  alert(data);
+                  add_comment($idPostContent,$commentValue);
+                  // hiện dòng cmt mới nhập
                 }
             });
      });
+function add_comment($idPostContent,$value){
+    html = '<div class="media p-3">';
+    html += '<img src="images/user.png" alt="" class="mr-3 mt-3 rounded-circle" style="width:45px; ">';
+    html +='    <div class="media-body">';
+    html +='       <h4>Username <small><i> </i>Posted on February 20 2016</small></h4>';
+    html +='      <p>'+$value+'</p>';
+    html +=' </div></div>';
+    $idPostContent.append(html);
+}
 
 </script>
-

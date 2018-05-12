@@ -417,9 +417,17 @@ function get_post_following( $userID ) {
 }
 
 // hàm insert comment vào 1 bài post
-
-function insert_comment(){
-	
+function insert_comment($idPost,$idUser,$comment){
+	global $conn;
+	connect_db();
+	// Câu truy vấn thêm
+	$sql = "
+            INSERT INTO `comments`( `created`, `content`, `postID`, `userID`) VALUES (NOW(),'$comment','$idPost','$idUser')
+    ";
+	// Thực hiện câu truy vấn
+	$query = mysqli_query( $conn, $sql );
+	return ($query);
+	die( "Fail" );
 }
 
 // Hàm lấy header
