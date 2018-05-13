@@ -313,8 +313,8 @@ function new_post( $description, $tags, $photo, $userID ) {
 
 	// Câu truy vấn thêm
 	$sql = "
-            INSERT INTO posts(description, tags, photo, userID, count_like) VALUES
-            				('$description', '$tags', '$photo', $userID, 0)
+            INSERT INTO posts(description, tags, photo, userID, count_like, created) VALUES
+            				('$description', '$tags', '$photo', $userID, 0, NOW())
     ";
 
 	// Thực hiện câu truy vấn

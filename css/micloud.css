@@ -28,13 +28,17 @@ section.comments {padding:15px 0;}
 .home-post-photo img {max-width: 100%;}
 
 /*----------- nhu-------------*/
-.user_imgavatar{
-    width: 40%;
+.user_imgavatar {
+    /* width: 40%; */
     /* border-radius: 50%; */
     float: right;
     margin-right: 20%;
-
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    overflow:hidden;
 }
+.user_imgavatar img {max-width:100%;}
 .user_avatar{
     width: 400px;
 }

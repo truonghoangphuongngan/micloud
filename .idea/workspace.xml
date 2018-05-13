@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b0e579c-c943-4ab2-b35f-9522c3463d8c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/micloud.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/css/micloud.css" afterPath="$PROJECT_DIR$/css/micloud.css" />
       <change beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
       <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/newpost.php" afterPath="$PROJECT_DIR$/newpost.php" />
       <change beforePath="$PROJECT_DIR$/user.php" afterPath="$PROJECT_DIR$/user.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="156" column="22" lean-forward="false" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="22" />
+            <state relative-caret-position="373">
+              <caret line="588" column="37" lean-forward="true" selection-start-line="588" selection-start-column="37" selection-end-line="588" selection-end-column="37" />
               <folding>
                 <element signature="e#6#33#0#PHP" expanded="false" />
                 <element signature="n#sign_in#0;n#!!top" expanded="false" />
@@ -43,6 +40,7 @@
                 <element signature="e#2563#2726#0#PHP" expanded="false" />
                 <element signature="e#2728#2879#0#PHP" expanded="false" />
                 <element signature="e#3181#3242#0#PHP" expanded="false" />
+                <element signature="n#get_content#0;n#!!top" expanded="false" />
                 <element signature="e#3900#4029#0#PHP" expanded="false" />
                 <element signature="e#4033#4210#0#PHP" expanded="false" />
                 <element signature="e#4065#4199#0#PHP" expanded="false" />
@@ -61,24 +59,24 @@
                 <element signature="e#6903#6988#0#PHP" expanded="false" />
                 <element signature="e#6964#6988#0#PHP" expanded="false" />
                 <element signature="n#new_post#0;n#!!top" expanded="false" />
-                <element signature="e#7615#7700#0#PHP" expanded="false" />
-                <element signature="e#7676#7700#0#PHP" expanded="false" />
+                <element signature="e#7631#7716#0#PHP" expanded="false" />
+                <element signature="e#7692#7716#0#PHP" expanded="false" />
                 <element signature="n#delete_post#0;n#!!top" expanded="false" />
                 <element signature="n#upload_img#0;n#!!top" expanded="false" />
-                <element signature="e#8255#8282#0#PHP" expanded="false" />
-                <element signature="e#8731#8819#0#PHP" expanded="false" />
+                <element signature="e#8271#8298#0#PHP" expanded="false" />
+                <element signature="e#8747#8835#0#PHP" expanded="false" />
                 <element signature="n#follow_friend#0;n#!!top" expanded="false" />
-                <element signature="e#9207#9324#0#PHP" expanded="false" />
-                <element signature="e#9225#9321#0#PHP" expanded="false" />
-                <element signature="e#9483#9711#0#PHP" expanded="false" />
-                <element signature="e#9598#9708#0#PHP" expanded="false" />
-                <element signature="e#9950#10046#0#PHP" expanded="false" />
-                <element signature="e#10004#10046#0#PHP" expanded="false" />
+                <element signature="e#9223#9340#0#PHP" expanded="false" />
+                <element signature="e#9241#9337#0#PHP" expanded="false" />
+                <element signature="e#9499#9727#0#PHP" expanded="false" />
+                <element signature="e#9614#9724#0#PHP" expanded="false" />
+                <element signature="e#9966#10062#0#PHP" expanded="false" />
+                <element signature="e#10020#10062#0#PHP" expanded="false" />
                 <element signature="n#stringToArray#0;n#!!top" expanded="false" />
                 <element signature="n#arrayToString#0;n#!!top" expanded="false" />
                 <element signature="n#get_post_following#0;n#!!top" expanded="false" />
-                <element signature="e#10567#10674#0#PHP" expanded="false" />
-                <element signature="e#10585#10671#0#PHP" expanded="false" />
+                <element signature="e#10583#10690#0#PHP" expanded="false" />
+                <element signature="e#10601#10687#0#PHP" expanded="false" />
                 <element signature="n#insert_comment#0;n#!!top" expanded="false" />
                 <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
                 <element signature="n#update_like#0;n#!!top" expanded="false" />
@@ -88,7 +86,6 @@
                 <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
                 <element signature="n#get_header#0;n#!!top" expanded="false" />
                 <element signature="n#get_footer#0;n#!!top" expanded="false" />
-                <element signature="n#get_link_user#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,19 +94,31 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
+            <state relative-caret-position="186">
+              <caret line="71" column="145" lean-forward="false" selection-start-line="71" selection-start-column="145" selection-end-line="71" selection-end-column="145" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="micloud.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/micloud.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="108" column="16" lean-forward="true" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="187">
+              <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="46" />
+              <folding>
+                <element signature="e#870#899#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +143,7 @@
       <find>arrayToString</find>
       <find>action_like</find>
       <find>is_liked</find>
+      <find>user_imgavatar</find>
     </findStrings>
     <replaceStrings>
       <replace>$user_date</replace>
@@ -152,12 +162,12 @@
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/friend.php" />
         <option value="$PROJECT_DIR$/newpost.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/js/micloud.js" />
-        <option value="$PROJECT_DIR$/css/micloud.css" />
-        <option value="$PROJECT_DIR$/user.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/user.php" />
+        <option value="$PROJECT_DIR$/css/micloud.css" />
       </list>
     </option>
   </component>
@@ -196,6 +206,16 @@
               <item name="micloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="micloud" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="micloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="micloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="micloud" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -233,7 +253,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525870168073</updated>
       <workItem from="1525870169759" duration="8805000" />
-      <workItem from="1526199547065" duration="10854000" />
+      <workItem from="1526199547065" duration="11765000" />
     </task>
     <task id="LOCAL-00001" summary="comment - done">
       <created>1526202349787</created>
@@ -263,11 +283,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526207090031</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="home page - done">
+      <created>1526210420423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1526210420423</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19659000" />
+    <option name="totallyTimeSpent" value="20570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -304,11 +331,12 @@
     <MESSAGE value="like function - done" />
     <MESSAGE value="delete post - done" />
     <MESSAGE value="update -- like, delete" />
-    <option name="LAST_COMMIT_MESSAGE" value="update -- like, delete" />
+    <MESSAGE value="home page - done" />
+    <option name="LAST_COMMIT_MESSAGE" value="home page - done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -335,6 +363,7 @@
             <element signature="e#2563#2726#0#PHP" expanded="false" />
             <element signature="e#2728#2879#0#PHP" expanded="false" />
             <element signature="e#3181#3242#0#PHP" expanded="false" />
+            <element signature="n#get_content#0;n#!!top" expanded="false" />
             <element signature="e#3900#4029#0#PHP" expanded="false" />
             <element signature="e#4033#4210#0#PHP" expanded="false" />
             <element signature="e#4065#4199#0#PHP" expanded="false" />
@@ -353,24 +382,24 @@
             <element signature="e#6903#6988#0#PHP" expanded="false" />
             <element signature="e#6964#6988#0#PHP" expanded="false" />
             <element signature="n#new_post#0;n#!!top" expanded="false" />
-            <element signature="e#7615#7700#0#PHP" expanded="false" />
-            <element signature="e#7676#7700#0#PHP" expanded="false" />
+            <element signature="e#7631#7716#0#PHP" expanded="false" />
+            <element signature="e#7692#7716#0#PHP" expanded="false" />
             <element signature="n#delete_post#0;n#!!top" expanded="false" />
             <element signature="n#upload_img#0;n#!!top" expanded="false" />
-            <element signature="e#8255#8282#0#PHP" expanded="false" />
-            <element signature="e#8731#8819#0#PHP" expanded="false" />
+            <element signature="e#8271#8298#0#PHP" expanded="false" />
+            <element signature="e#8747#8835#0#PHP" expanded="false" />
             <element signature="n#follow_friend#0;n#!!top" expanded="false" />
-            <element signature="e#9207#9324#0#PHP" expanded="false" />
-            <element signature="e#9225#9321#0#PHP" expanded="false" />
-            <element signature="e#9483#9711#0#PHP" expanded="false" />
-            <element signature="e#9598#9708#0#PHP" expanded="false" />
-            <element signature="e#9950#10046#0#PHP" expanded="false" />
-            <element signature="e#10004#10046#0#PHP" expanded="false" />
+            <element signature="e#9223#9340#0#PHP" expanded="false" />
+            <element signature="e#9241#9337#0#PHP" expanded="false" />
+            <element signature="e#9499#9727#0#PHP" expanded="false" />
+            <element signature="e#9614#9724#0#PHP" expanded="false" />
+            <element signature="e#9966#10062#0#PHP" expanded="false" />
+            <element signature="e#10020#10062#0#PHP" expanded="false" />
             <element signature="n#stringToArray#0;n#!!top" expanded="false" />
             <element signature="n#arrayToString#0;n#!!top" expanded="false" />
             <element signature="n#get_post_following#0;n#!!top" expanded="false" />
-            <element signature="e#10567#10674#0#PHP" expanded="false" />
-            <element signature="e#10585#10671#0#PHP" expanded="false" />
+            <element signature="e#10583#10690#0#PHP" expanded="false" />
+            <element signature="e#10601#10687#0#PHP" expanded="false" />
             <element signature="n#insert_comment#0;n#!!top" expanded="false" />
             <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
             <element signature="n#update_like#0;n#!!top" expanded="false" />
@@ -380,7 +409,6 @@
             <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
             <element signature="n#get_header#0;n#!!top" expanded="false" />
             <element signature="n#get_footer#0;n#!!top" expanded="false" />
-            <element signature="n#get_link_user#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -421,7 +449,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#870#899#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -497,10 +527,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/micloud.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="156" column="22" lean-forward="false" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="22" />
+        <state relative-caret-position="373">
+          <caret line="588" column="37" lean-forward="true" selection-start-line="588" selection-start-column="37" selection-end-line="588" selection-end-column="37" />
           <folding>
             <element signature="e#6#33#0#PHP" expanded="false" />
             <element signature="n#sign_in#0;n#!!top" expanded="false" />
@@ -519,6 +565,7 @@
             <element signature="e#2563#2726#0#PHP" expanded="false" />
             <element signature="e#2728#2879#0#PHP" expanded="false" />
             <element signature="e#3181#3242#0#PHP" expanded="false" />
+            <element signature="n#get_content#0;n#!!top" expanded="false" />
             <element signature="e#3900#4029#0#PHP" expanded="false" />
             <element signature="e#4033#4210#0#PHP" expanded="false" />
             <element signature="e#4065#4199#0#PHP" expanded="false" />
@@ -537,24 +584,24 @@
             <element signature="e#6903#6988#0#PHP" expanded="false" />
             <element signature="e#6964#6988#0#PHP" expanded="false" />
             <element signature="n#new_post#0;n#!!top" expanded="false" />
-            <element signature="e#7615#7700#0#PHP" expanded="false" />
-            <element signature="e#7676#7700#0#PHP" expanded="false" />
+            <element signature="e#7631#7716#0#PHP" expanded="false" />
+            <element signature="e#7692#7716#0#PHP" expanded="false" />
             <element signature="n#delete_post#0;n#!!top" expanded="false" />
             <element signature="n#upload_img#0;n#!!top" expanded="false" />
-            <element signature="e#8255#8282#0#PHP" expanded="false" />
-            <element signature="e#8731#8819#0#PHP" expanded="false" />
+            <element signature="e#8271#8298#0#PHP" expanded="false" />
+            <element signature="e#8747#8835#0#PHP" expanded="false" />
             <element signature="n#follow_friend#0;n#!!top" expanded="false" />
-            <element signature="e#9207#9324#0#PHP" expanded="false" />
-            <element signature="e#9225#9321#0#PHP" expanded="false" />
-            <element signature="e#9483#9711#0#PHP" expanded="false" />
-            <element signature="e#9598#9708#0#PHP" expanded="false" />
-            <element signature="e#9950#10046#0#PHP" expanded="false" />
-            <element signature="e#10004#10046#0#PHP" expanded="false" />
+            <element signature="e#9223#9340#0#PHP" expanded="false" />
+            <element signature="e#9241#9337#0#PHP" expanded="false" />
+            <element signature="e#9499#9727#0#PHP" expanded="false" />
+            <element signature="e#9614#9724#0#PHP" expanded="false" />
+            <element signature="e#9966#10062#0#PHP" expanded="false" />
+            <element signature="e#10020#10062#0#PHP" expanded="false" />
             <element signature="n#stringToArray#0;n#!!top" expanded="false" />
             <element signature="n#arrayToString#0;n#!!top" expanded="false" />
             <element signature="n#get_post_following#0;n#!!top" expanded="false" />
-            <element signature="e#10567#10674#0#PHP" expanded="false" />
-            <element signature="e#10585#10671#0#PHP" expanded="false" />
+            <element signature="e#10583#10690#0#PHP" expanded="false" />
+            <element signature="e#10601#10687#0#PHP" expanded="false" />
             <element signature="n#insert_comment#0;n#!!top" expanded="false" />
             <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
             <element signature="n#update_like#0;n#!!top" expanded="false" />
@@ -564,47 +611,32 @@
             <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
             <element signature="n#get_header#0;n#!!top" expanded="false" />
             <element signature="n#get_footer#0;n#!!top" expanded="false" />
-            <element signature="n#get_link_user#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="14" lean-forward="false" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="e#870#899#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/micloud.js">
+    <entry file="file://$PROJECT_DIR$/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        <state relative-caret-position="186">
+          <caret line="71" column="145" lean-forward="false" selection-start-line="71" selection-start-column="145" selection-end-line="71" selection-end-column="145" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/micloud.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="26" column="31" lean-forward="false" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="54" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="72" column="24" lean-forward="false" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+        <state relative-caret-position="441">
+          <caret line="108" column="16" lean-forward="true" selection-start-line="108" selection-start-column="16" selection-end-line="108" selection-end-column="16" />
           <folding />
         </state>
       </provider>

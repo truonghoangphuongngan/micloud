@@ -69,8 +69,8 @@ if ( isset( $_POST['post_like'] ) ) {
         <!--avatar-->
         <div class="user_avatar">
             <a href="edituser.php">
-                <div class="user_imgavatar" title="Thay đổi ảnh đại diện">
-                    <img class="card-img-top rounded-circle" src="<?php echo get_link_avatar( $user_id ); ?>"
+                <div class="user_imgavatar" title="Thay đổi ảnh đại diện" style="background-image: url(<?php echo get_link_avatar( $user_id ); ?>)">
+                    <img class="" src="<?php echo get_link_avatar( $user_id ); ?>"
                          alt="Card image">
                 </div>
             </a>
@@ -139,8 +139,12 @@ if ( isset( $_POST['post_like'] ) ) {
                                 <!-- Caption -->
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="media border p-3">
-                                        <img src="<?php echo get_link_avatar( $user_id ); ?>"
-                                             class="mr-3 mt-3 rounded-circle" style="width:60px;">
+
+                                        <!-- Avatar -->
+                                        <div class="avatar-display">
+                                            <img src="<?php echo get_link_avatar( $user_id ); ?>">
+                                        </div>
+
                                         <div class="media-body">
                                             <h5><?php echo $username; ?></h5>
                                             <p><?php echo $post['description']; ?></p>

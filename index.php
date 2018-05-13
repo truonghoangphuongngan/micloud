@@ -31,9 +31,14 @@ if ( isset( $_POST['comment'] ) ) {
 				?>
 
                 <div class="media border p-3 mb-3 bg-grey">
+
+                    <!-- Avatar -->
                     <div class="avatar-display">
+                        <a style="display: inline-block" href="<?php echo get_link_user($user['username']); ?>">
                         <img src="<?php echo get_link_avatar( $post['userID'] ); ?>" alt="John Doe">
+                        </a>
                     </div>
+
                     <div class="media-body">
                         <h4><?php echo $user['fullname']; ?>
                             <small><i><?php echo $post['created']; ?></i></small>
