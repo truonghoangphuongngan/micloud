@@ -51,7 +51,7 @@ if ( isset( $_POST['follow'] ) ) {
 // Neu nhan duoc comment
 if ( isset( $_POST['comment'] ) ) {
 	$comment = $_POST['comment'];
-	insert_comment( $_POST['post_id'], $user_id, $comment );
+	insert_comment( $_POST['post_id'], $_SESSION['userID'], $comment );
 }
 
 /**
@@ -59,7 +59,7 @@ if ( isset( $_POST['comment'] ) ) {
  */
 // Neu nhan duoc like
 if ( isset( $_POST['post_like'] ) ) {
-	action_like( $_POST['post_like'], $user_id );
+	action_like( $_POST['post_like'], $_SESSION['userID'] );
 }
 
 ?>
@@ -190,12 +190,14 @@ if ( isset( $_POST['post_like'] ) ) {
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
-                            <form method="post" action="">
-                                <button class="btn btn-link" type="submit"
-                                        onclick="return confirm('Xóa bài đăng này?');"
-                                        name="delete_post" value="<?php echo $post['postID']; ?>">Xóa bài đăng
-                                </button>
-                            </form>
+							<?php if ( $_SESSION['userID'] == $user_id ):; ?>
+                                <form method="post" action="">
+                                    <button class="btn btn-link" type="submit"
+                                            onclick="return confirm('Xóa bài đăng này?');"
+                                            name="delete_post" value="<?php echo $post['postID']; ?>">Xóa bài đăng
+                                    </button>
+                                </form>
+							<?php endif; ?>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
 

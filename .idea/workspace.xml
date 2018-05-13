@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b0e579c-c943-4ab2-b35f-9522c3463d8c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
       <change beforePath="$PROJECT_DIR$/user.php" afterPath="$PROJECT_DIR$/user.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
-              <caret line="531" column="41" lean-forward="true" selection-start-line="531" selection-start-column="41" selection-end-line="531" selection-end-column="41" />
+            <state relative-caret-position="237">
+              <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="9" selection-end-line="485" selection-end-column="20" />
               <folding>
                 <element signature="e#6#33#0#PHP" expanded="false" />
                 <element signature="n#sign_in#0;n#!!top" expanded="false" />
@@ -79,7 +78,6 @@
                 <element signature="n#insert_comment#0;n#!!top" expanded="false" />
                 <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
                 <element signature="n#update_like#0;n#!!top" expanded="false" />
-                <element signature="n#action_like#0;n#!!top" expanded="false" />
                 <element signature="n#get_count_like#0;n#!!top" expanded="false" />
                 <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
                 <element signature="n#get_header#0;n#!!top" expanded="false" />
@@ -93,11 +91,11 @@
       <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="376">
+              <caret line="205" column="18" lean-forward="true" selection-start-line="205" selection-start-column="18" selection-end-line="205" selection-end-column="18" />
               <folding>
-                <element signature="e#1185#2410#0#HTML" expanded="false" />
-                <element signature="e#2878#3658#0#HTML" expanded="false" />
+                <element signature="e#1207#2432#0#HTML" expanded="false" />
+                <element signature="e#2900#3680#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -134,6 +132,7 @@
       <find>get_user_avatar</find>
       <find>get_link</find>
       <find>arrayToString</find>
+      <find>action_like</find>
     </findStrings>
     <replaceStrings>
       <replace>$user_date</replace>
@@ -237,7 +236,7 @@
       <option name="presentableId" value="Default" />
       <updated>1525870168073</updated>
       <workItem from="1525870169759" duration="8805000" />
-      <workItem from="1526199547065" duration="7112000" />
+      <workItem from="1526199547065" duration="7518000" />
     </task>
     <task id="LOCAL-00001" summary="comment - done">
       <created>1526202349787</created>
@@ -253,11 +252,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526206281140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="delete post - done">
+      <created>1526206678944</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1526206678944</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15917000" />
+    <option name="totallyTimeSpent" value="16323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -292,7 +298,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="comment - done" />
     <MESSAGE value="like function - done" />
-    <option name="LAST_COMMIT_MESSAGE" value="like function - done" />
+    <MESSAGE value="delete post - done" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete post - done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -362,7 +369,6 @@
             <element signature="n#insert_comment#0;n#!!top" expanded="false" />
             <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
             <element signature="n#update_like#0;n#!!top" expanded="false" />
-            <element signature="n#action_like#0;n#!!top" expanded="false" />
             <element signature="n#get_count_like#0;n#!!top" expanded="false" />
             <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
             <element signature="n#get_header#0;n#!!top" expanded="false" />
@@ -377,8 +383,8 @@
         <state relative-caret-position="238">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="36" />
           <folding>
-            <element signature="e#1185#2410#0#HTML" expanded="false" />
-            <element signature="e#2878#3658#0#HTML" expanded="false" />
+            <element signature="e#1207#2432#0#HTML" expanded="false" />
+            <element signature="e#2900#3680#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -495,10 +501,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/micloud.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="99" column="1" lean-forward="false" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
-          <caret line="531" column="41" lean-forward="true" selection-start-line="531" selection-start-column="41" selection-end-line="531" selection-end-column="41" />
+        <state relative-caret-position="237">
+          <caret line="485" column="20" lean-forward="false" selection-start-line="485" selection-start-column="9" selection-end-line="485" selection-end-column="20" />
           <folding>
             <element signature="e#6#33#0#PHP" expanded="false" />
             <element signature="n#sign_in#0;n#!!top" expanded="false" />
@@ -558,7 +572,6 @@
             <element signature="n#insert_comment#0;n#!!top" expanded="false" />
             <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
             <element signature="n#update_like#0;n#!!top" expanded="false" />
-            <element signature="n#action_like#0;n#!!top" expanded="false" />
             <element signature="n#get_count_like#0;n#!!top" expanded="false" />
             <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
             <element signature="n#get_header#0;n#!!top" expanded="false" />
@@ -568,21 +581,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/micloud.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="99" column="1" lean-forward="false" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="376">
+          <caret line="205" column="18" lean-forward="true" selection-start-line="205" selection-start-column="18" selection-end-line="205" selection-end-column="18" />
           <folding>
-            <element signature="e#1185#2410#0#HTML" expanded="false" />
-            <element signature="e#2878#3658#0#HTML" expanded="false" />
+            <element signature="e#1207#2432#0#HTML" expanded="false" />
+            <element signature="e#2900#3680#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
