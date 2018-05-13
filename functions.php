@@ -400,6 +400,7 @@ function arrayToString( $array ) {
 	return $str;
 }
 
+// hàm lấy tất cả các bài post của user mình theo dõi
 function get_post_following( $userID ) {
 	global $conn;
 	connect_db();
@@ -413,6 +414,20 @@ function get_post_following( $userID ) {
 	$listFriend = $result['follow'];
 
 	return get_content( "post_user_following", $listFriend );
+}
+
+// hàm insert comment vào 1 bài post
+function insert_comment($idPost,$idUser,$comment){
+	global $conn;
+	connect_db();
+	// Câu truy vấn thêm
+	$sql = "
+            INSERT INTO `comments`( `created`, `content`, `postID`, `userID`) VALUES (NOW(),'$comment','$idPost','$idUser')
+    ";
+	// Thực hiện câu truy vấn
+	$query = mysqli_query( $conn, $sql );
+	return ($query);
+	die( "Fail" );
 }
 
 // Hàm lấy header
