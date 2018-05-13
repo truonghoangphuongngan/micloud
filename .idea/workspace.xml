@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b0e579c-c943-4ab2-b35f-9522c3463d8c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/micloud.css" afterPath="$PROJECT_DIR$/css/micloud.css" />
       <change beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change beforePath="$PROJECT_DIR$/newpost.php" afterPath="$PROJECT_DIR$/newpost.php" />
       <change beforePath="$PROJECT_DIR$/user.php" afterPath="$PROJECT_DIR$/user.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="170" column="124" lean-forward="false" selection-start-line="170" selection-start-column="124" selection-end-line="170" selection-end-column="124" />
+            <state relative-caret-position="417">
+              <caret line="319" column="4" lean-forward="true" selection-start-line="319" selection-start-column="4" selection-end-line="319" selection-end-column="4" />
               <folding>
                 <element signature="e#6#33#0#PHP" expanded="false" />
                 <element signature="n#sign_in#0;n#!!top" expanded="false" />
@@ -40,45 +38,51 @@
                 <element signature="e#2563#2726#0#PHP" expanded="false" />
                 <element signature="e#2728#2879#0#PHP" expanded="false" />
                 <element signature="e#3181#3242#0#PHP" expanded="false" />
+                <element signature="n#get_content#0;n#!!top" expanded="false" />
                 <element signature="e#3541#3658#0#PHP" expanded="false" />
                 <element signature="e#3662#3779#0#PHP" expanded="false" />
                 <element signature="e#3783#3912#0#PHP" expanded="false" />
                 <element signature="e#3916#4093#0#PHP" expanded="false" />
                 <element signature="e#3948#4082#0#PHP" expanded="false" />
                 <element signature="e#4097#4244#0#PHP" expanded="false" />
-                <element signature="e#4398#4463#0#PHP" expanded="false" />
-                <element signature="e#4550#4624#0#PHP" expanded="false" />
-                <element signature="e#4632#4671#0#PHP" expanded="false" />
+                <element signature="e#4664#4729#0#PHP" expanded="false" />
+                <element signature="e#4816#4890#0#PHP" expanded="false" />
+                <element signature="e#4898#4937#0#PHP" expanded="false" />
                 <element signature="n#mi_print#0;n#!!top" expanded="false" />
                 <element signature="n#get_link_avatar#0;n#!!top" expanded="false" />
-                <element signature="e#4895#4958#0#PHP" expanded="false" />
+                <element signature="e#5161#5224#0#PHP" expanded="false" />
                 <element signature="n#get_link_photo#0;n#!!top" expanded="false" />
                 <element signature="n#update_user#0;n#!!top" expanded="false" />
-                <element signature="e#5748#5833#0#PHP" expanded="false" />
-                <element signature="e#5809#5833#0#PHP" expanded="false" />
+                <element signature="e#6014#6099#0#PHP" expanded="false" />
+                <element signature="e#6075#6099#0#PHP" expanded="false" />
                 <element signature="n#update_avatar#0;n#!!top" expanded="false" />
-                <element signature="e#6324#6409#0#PHP" expanded="false" />
-                <element signature="e#6385#6409#0#PHP" expanded="false" />
+                <element signature="e#6590#6675#0#PHP" expanded="false" />
+                <element signature="e#6651#6675#0#PHP" expanded="false" />
                 <element signature="n#new_post#0;n#!!top" expanded="false" />
-                <element signature="e#7021#7106#0#PHP" expanded="false" />
-                <element signature="e#7082#7106#0#PHP" expanded="false" />
+                <element signature="e#7302#7387#0#PHP" expanded="false" />
+                <element signature="e#7363#7387#0#PHP" expanded="false" />
                 <element signature="n#upload_img#0;n#!!top" expanded="false" />
-                <element signature="e#7553#7580#0#PHP" expanded="false" />
-                <element signature="e#8029#8117#0#PHP" expanded="false" />
+                <element signature="e#7834#7861#0#PHP" expanded="false" />
+                <element signature="e#8310#8398#0#PHP" expanded="false" />
                 <element signature="n#follow_friend#0;n#!!top" expanded="false" />
-                <element signature="e#8505#8622#0#PHP" expanded="false" />
-                <element signature="e#8523#8619#0#PHP" expanded="false" />
-                <element signature="e#8781#9009#0#PHP" expanded="false" />
-                <element signature="e#8896#9006#0#PHP" expanded="false" />
-                <element signature="e#9248#9344#0#PHP" expanded="false" />
-                <element signature="e#9302#9344#0#PHP" expanded="false" />
+                <element signature="e#8786#8903#0#PHP" expanded="false" />
+                <element signature="e#8804#8900#0#PHP" expanded="false" />
+                <element signature="e#9062#9290#0#PHP" expanded="false" />
+                <element signature="e#9177#9287#0#PHP" expanded="false" />
+                <element signature="e#9529#9625#0#PHP" expanded="false" />
+                <element signature="e#9583#9625#0#PHP" expanded="false" />
                 <element signature="n#stringToArray#0;n#!!top" expanded="false" />
                 <element signature="n#arrayToString#0;n#!!top" expanded="false" />
-                <element signature="e#9514#9571#0#PHP" expanded="false" />
                 <element signature="n#get_post_following#0;n#!!top" expanded="false" />
-                <element signature="e#9831#9938#0#PHP" expanded="false" />
-                <element signature="e#9849#9935#0#PHP" expanded="false" />
+                <element signature="e#10146#10253#0#PHP" expanded="false" />
+                <element signature="e#10164#10250#0#PHP" expanded="false" />
                 <element signature="n#insert_comment#0;n#!!top" expanded="false" />
+                <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
+                <element signature="n#update_like#0;n#!!top" expanded="false" />
+                <element signature="n#action_like#0;n#!!top" expanded="false" />
+                <element signature="n#is_liked#0;n#!!top" expanded="false" />
+                <element signature="n#get_count_like#0;n#!!top" expanded="false" />
+                <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
                 <element signature="n#get_header#0;n#!!top" expanded="false" />
                 <element signature="n#get_footer#0;n#!!top" expanded="false" />
                 <element signature="n#get_link_user#0;n#!!top" expanded="false" />
@@ -87,12 +91,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
-              <folding />
+            <state relative-caret-position="291">
+              <caret line="188" column="81" lean-forward="false" selection-start-line="188" selection-start-column="81" selection-end-line="188" selection-end-column="81" />
+              <folding>
+                <element signature="e#1077#2302#0#HTML" expanded="false" />
+                <element signature="e#2770#3550#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,6 +134,7 @@
       <find>$baipost</find>
       <find>get_user_avatar</find>
       <find>get_link</find>
+      <find>arrayToString</find>
     </findStrings>
     <replaceStrings>
       <replace>$user_date</replace>
@@ -147,8 +155,8 @@
         <option value="$PROJECT_DIR$/friend.php" />
         <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/newpost.php" />
-        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/css/micloud.css" />
+        <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/user.php" />
       </list>
     </option>
@@ -230,12 +238,20 @@
       <option name="presentableId" value="Default" />
       <updated>1525870168073</updated>
       <workItem from="1525870169759" duration="8805000" />
-      <workItem from="1526199547065" duration="2782000" />
+      <workItem from="1526199547065" duration="6711000" />
     </task>
+    <task id="LOCAL-00001" summary="comment - done">
+      <created>1526202349787</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1526202349787</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11587000" />
+    <option name="totallyTimeSpent" value="15516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -267,6 +283,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="comment - done" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment - done" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -294,45 +314,51 @@
             <element signature="e#2563#2726#0#PHP" expanded="false" />
             <element signature="e#2728#2879#0#PHP" expanded="false" />
             <element signature="e#3181#3242#0#PHP" expanded="false" />
+            <element signature="n#get_content#0;n#!!top" expanded="false" />
             <element signature="e#3541#3658#0#PHP" expanded="false" />
             <element signature="e#3662#3779#0#PHP" expanded="false" />
             <element signature="e#3783#3912#0#PHP" expanded="false" />
             <element signature="e#3916#4093#0#PHP" expanded="false" />
             <element signature="e#3948#4082#0#PHP" expanded="false" />
             <element signature="e#4097#4244#0#PHP" expanded="false" />
-            <element signature="e#4398#4463#0#PHP" expanded="false" />
-            <element signature="e#4550#4624#0#PHP" expanded="false" />
-            <element signature="e#4632#4671#0#PHP" expanded="false" />
+            <element signature="e#4664#4729#0#PHP" expanded="false" />
+            <element signature="e#4816#4890#0#PHP" expanded="false" />
+            <element signature="e#4898#4937#0#PHP" expanded="false" />
             <element signature="n#mi_print#0;n#!!top" expanded="false" />
             <element signature="n#get_link_avatar#0;n#!!top" expanded="false" />
-            <element signature="e#4895#4958#0#PHP" expanded="false" />
+            <element signature="e#5161#5224#0#PHP" expanded="false" />
             <element signature="n#get_link_photo#0;n#!!top" expanded="false" />
             <element signature="n#update_user#0;n#!!top" expanded="false" />
-            <element signature="e#5748#5833#0#PHP" expanded="false" />
-            <element signature="e#5809#5833#0#PHP" expanded="false" />
+            <element signature="e#6014#6099#0#PHP" expanded="false" />
+            <element signature="e#6075#6099#0#PHP" expanded="false" />
             <element signature="n#update_avatar#0;n#!!top" expanded="false" />
-            <element signature="e#6324#6409#0#PHP" expanded="false" />
-            <element signature="e#6385#6409#0#PHP" expanded="false" />
+            <element signature="e#6590#6675#0#PHP" expanded="false" />
+            <element signature="e#6651#6675#0#PHP" expanded="false" />
             <element signature="n#new_post#0;n#!!top" expanded="false" />
-            <element signature="e#7021#7106#0#PHP" expanded="false" />
-            <element signature="e#7082#7106#0#PHP" expanded="false" />
+            <element signature="e#7302#7387#0#PHP" expanded="false" />
+            <element signature="e#7363#7387#0#PHP" expanded="false" />
             <element signature="n#upload_img#0;n#!!top" expanded="false" />
-            <element signature="e#7553#7580#0#PHP" expanded="false" />
-            <element signature="e#8029#8117#0#PHP" expanded="false" />
+            <element signature="e#7834#7861#0#PHP" expanded="false" />
+            <element signature="e#8310#8398#0#PHP" expanded="false" />
             <element signature="n#follow_friend#0;n#!!top" expanded="false" />
-            <element signature="e#8505#8622#0#PHP" expanded="false" />
-            <element signature="e#8523#8619#0#PHP" expanded="false" />
-            <element signature="e#8781#9009#0#PHP" expanded="false" />
-            <element signature="e#8896#9006#0#PHP" expanded="false" />
-            <element signature="e#9248#9344#0#PHP" expanded="false" />
-            <element signature="e#9302#9344#0#PHP" expanded="false" />
+            <element signature="e#8786#8903#0#PHP" expanded="false" />
+            <element signature="e#8804#8900#0#PHP" expanded="false" />
+            <element signature="e#9062#9290#0#PHP" expanded="false" />
+            <element signature="e#9177#9287#0#PHP" expanded="false" />
+            <element signature="e#9529#9625#0#PHP" expanded="false" />
+            <element signature="e#9583#9625#0#PHP" expanded="false" />
             <element signature="n#stringToArray#0;n#!!top" expanded="false" />
             <element signature="n#arrayToString#0;n#!!top" expanded="false" />
-            <element signature="e#9514#9571#0#PHP" expanded="false" />
             <element signature="n#get_post_following#0;n#!!top" expanded="false" />
-            <element signature="e#9831#9938#0#PHP" expanded="false" />
-            <element signature="e#9849#9935#0#PHP" expanded="false" />
+            <element signature="e#10146#10253#0#PHP" expanded="false" />
+            <element signature="e#10164#10250#0#PHP" expanded="false" />
             <element signature="n#insert_comment#0;n#!!top" expanded="false" />
+            <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
+            <element signature="n#update_like#0;n#!!top" expanded="false" />
+            <element signature="n#action_like#0;n#!!top" expanded="false" />
+            <element signature="n#is_liked#0;n#!!top" expanded="false" />
+            <element signature="n#get_count_like#0;n#!!top" expanded="false" />
+            <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
             <element signature="n#get_header#0;n#!!top" expanded="false" />
             <element signature="n#get_footer#0;n#!!top" expanded="false" />
             <element signature="n#get_link_user#0;n#!!top" expanded="false" />
@@ -344,7 +370,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#1077#2302#0#HTML" expanded="false" />
+            <element signature="e#2770#3550#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -460,10 +489,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/micloud.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="99" column="1" lean-forward="false" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="188" column="81" lean-forward="false" selection-start-line="188" selection-start-column="81" selection-end-line="188" selection-end-column="81" />
+          <folding>
+            <element signature="e#1077#2302#0#HTML" expanded="false" />
+            <element signature="e#2770#3550#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="170" column="124" lean-forward="false" selection-start-line="170" selection-start-column="124" selection-end-line="170" selection-end-column="124" />
+        <state relative-caret-position="417">
+          <caret line="319" column="4" lean-forward="true" selection-start-line="319" selection-start-column="4" selection-end-line="319" selection-end-column="4" />
           <folding>
             <element signature="e#6#33#0#PHP" expanded="false" />
             <element signature="n#sign_in#0;n#!!top" expanded="false" />
@@ -482,65 +530,55 @@
             <element signature="e#2563#2726#0#PHP" expanded="false" />
             <element signature="e#2728#2879#0#PHP" expanded="false" />
             <element signature="e#3181#3242#0#PHP" expanded="false" />
+            <element signature="n#get_content#0;n#!!top" expanded="false" />
             <element signature="e#3541#3658#0#PHP" expanded="false" />
             <element signature="e#3662#3779#0#PHP" expanded="false" />
             <element signature="e#3783#3912#0#PHP" expanded="false" />
             <element signature="e#3916#4093#0#PHP" expanded="false" />
             <element signature="e#3948#4082#0#PHP" expanded="false" />
             <element signature="e#4097#4244#0#PHP" expanded="false" />
-            <element signature="e#4398#4463#0#PHP" expanded="false" />
-            <element signature="e#4550#4624#0#PHP" expanded="false" />
-            <element signature="e#4632#4671#0#PHP" expanded="false" />
+            <element signature="e#4664#4729#0#PHP" expanded="false" />
+            <element signature="e#4816#4890#0#PHP" expanded="false" />
+            <element signature="e#4898#4937#0#PHP" expanded="false" />
             <element signature="n#mi_print#0;n#!!top" expanded="false" />
             <element signature="n#get_link_avatar#0;n#!!top" expanded="false" />
-            <element signature="e#4895#4958#0#PHP" expanded="false" />
+            <element signature="e#5161#5224#0#PHP" expanded="false" />
             <element signature="n#get_link_photo#0;n#!!top" expanded="false" />
             <element signature="n#update_user#0;n#!!top" expanded="false" />
-            <element signature="e#5748#5833#0#PHP" expanded="false" />
-            <element signature="e#5809#5833#0#PHP" expanded="false" />
+            <element signature="e#6014#6099#0#PHP" expanded="false" />
+            <element signature="e#6075#6099#0#PHP" expanded="false" />
             <element signature="n#update_avatar#0;n#!!top" expanded="false" />
-            <element signature="e#6324#6409#0#PHP" expanded="false" />
-            <element signature="e#6385#6409#0#PHP" expanded="false" />
+            <element signature="e#6590#6675#0#PHP" expanded="false" />
+            <element signature="e#6651#6675#0#PHP" expanded="false" />
             <element signature="n#new_post#0;n#!!top" expanded="false" />
-            <element signature="e#7021#7106#0#PHP" expanded="false" />
-            <element signature="e#7082#7106#0#PHP" expanded="false" />
+            <element signature="e#7302#7387#0#PHP" expanded="false" />
+            <element signature="e#7363#7387#0#PHP" expanded="false" />
             <element signature="n#upload_img#0;n#!!top" expanded="false" />
-            <element signature="e#7553#7580#0#PHP" expanded="false" />
-            <element signature="e#8029#8117#0#PHP" expanded="false" />
+            <element signature="e#7834#7861#0#PHP" expanded="false" />
+            <element signature="e#8310#8398#0#PHP" expanded="false" />
             <element signature="n#follow_friend#0;n#!!top" expanded="false" />
-            <element signature="e#8505#8622#0#PHP" expanded="false" />
-            <element signature="e#8523#8619#0#PHP" expanded="false" />
-            <element signature="e#8781#9009#0#PHP" expanded="false" />
-            <element signature="e#8896#9006#0#PHP" expanded="false" />
-            <element signature="e#9248#9344#0#PHP" expanded="false" />
-            <element signature="e#9302#9344#0#PHP" expanded="false" />
+            <element signature="e#8786#8903#0#PHP" expanded="false" />
+            <element signature="e#8804#8900#0#PHP" expanded="false" />
+            <element signature="e#9062#9290#0#PHP" expanded="false" />
+            <element signature="e#9177#9287#0#PHP" expanded="false" />
+            <element signature="e#9529#9625#0#PHP" expanded="false" />
+            <element signature="e#9583#9625#0#PHP" expanded="false" />
             <element signature="n#stringToArray#0;n#!!top" expanded="false" />
             <element signature="n#arrayToString#0;n#!!top" expanded="false" />
-            <element signature="e#9514#9571#0#PHP" expanded="false" />
             <element signature="n#get_post_following#0;n#!!top" expanded="false" />
-            <element signature="e#9831#9938#0#PHP" expanded="false" />
-            <element signature="e#9849#9935#0#PHP" expanded="false" />
+            <element signature="e#10146#10253#0#PHP" expanded="false" />
+            <element signature="e#10164#10250#0#PHP" expanded="false" />
             <element signature="n#insert_comment#0;n#!!top" expanded="false" />
+            <element signature="n#get_comment_by_post_id#0;n#!!top" expanded="false" />
+            <element signature="n#update_like#0;n#!!top" expanded="false" />
+            <element signature="n#action_like#0;n#!!top" expanded="false" />
+            <element signature="n#is_liked#0;n#!!top" expanded="false" />
+            <element signature="n#get_count_like#0;n#!!top" expanded="false" />
+            <element signature="n#update_post_count_like#0;n#!!top" expanded="false" />
             <element signature="n#get_header#0;n#!!top" expanded="false" />
             <element signature="n#get_footer#0;n#!!top" expanded="false" />
             <element signature="n#get_link_user#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/micloud.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="99" column="1" lean-forward="false" selection-start-line="99" selection-start-column="1" selection-end-line="99" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>

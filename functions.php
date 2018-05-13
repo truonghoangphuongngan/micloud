@@ -171,6 +171,14 @@ function get_content( $command, $quantity ) {
 			$query = mysqli_query( $conn, "SELECT * FROM `comments` WHERE comments.postID = '$quantity' ORDER BY created ASC" );
 			break;
 
+		case "post_like":
+			$query = mysqli_query( $conn, "SELECT post_like FROM `users` WHERE users.userID = '$quantity'" );
+			break;
+
+		case "count_like":
+			$query = mysqli_query( $conn, "SELECT count_like FROM `posts` WHERE posts.postID = '$quantity'" );
+			break;
+
 		default:
 			echo "Wrong input! Command {$command} is not exist!";
 	}
@@ -291,8 +299,8 @@ function new_post( $description, $tags, $photo, $userID ) {
 
 	// Câu truy vấn thêm
 	$sql = "
-            INSERT INTO posts(description, tags, photo, userID) VALUES
-            				('$description', '$tags', '$photo', $userID)
+            INSERT INTO posts(description, tags, photo, userID, count_like) VALUES
+            				('$description', '$tags', '$photo', $userID, 0)
     ";
 
 	// Thực hiện câu truy vấn
@@ -401,7 +409,9 @@ function stringToArray( $string ) {
 function arrayToString( $array ) {
 	$str = "";
 	foreach ( $array as $value ) {
-		$str += $value . ",";
+		if ( ! empty( $value ) ) {
+			$str .= $value . ",";
+		}
 	}
 
 	return $str;
@@ -442,6 +452,110 @@ function insert_comment( $idPost, $idUser, $comment ) {
 // Hàm lấy comment thuộc post_id
 function get_comment_by_post_id( $post_id ) {
 	return get_content( "comments", $post_id );
+}
+
+// Hàm thêm like
+function update_like( $post_like, $user_id ) {
+	global $conn;
+	connect_db();
+
+	$sql = "UPDATE users SET post_like = '$post_like' WHERE users.userID = '$user_id'";
+
+	// Thực hiện câu truy vấn
+	$query = mysqli_query( $conn, $sql );
+
+	return $query;
+}
+
+// Hàm xử lý like
+function action_like( $post_id, $user_id ) {
+	// get post_like array of user
+	$post_like = get_content( 'post_like', $user_id )[0]['post_like'];
+
+	// If post_like empty => insert
+	if ( empty( $post_like ) ) {
+
+		//mi_print( "liked the first time" );
+
+		update_post_count_like($post_id, 1);
+
+		return update_like( $post_id, $user_id );
+	}
+
+	$post_like = explode( ',', $post_like );
+
+	// if user has liked this post => unlike
+	if ( in_array( $post_id, $post_like ) ) {
+		$new_post_like = '';
+		foreach ( $post_like as $post ) {
+			if ( $post != $post_id && ! empty( $post ) ) {
+				$new_post_like .= $post . ',';
+			}
+		}
+
+		//mi_print( "unliked" );
+		update_post_count_like($post_id, -1);
+
+		return update_like( $new_post_like, $user_id );
+	} // else => like
+	else {
+		global $conn;
+		connect_db();
+
+		//mi_print( $post_like );
+		array_push( $post_like, $post_id );
+		$post_like = arrayToString( $post_like );
+
+		//mi_print( "liked" );
+		update_post_count_like($post_id, 1);
+
+		return update_like( $post_like, $user_id );
+	}
+}
+
+// Hàm kiểm tra đã like hay chưa
+function is_liked( $post_id, $user_id ) {
+	// get post_like array of user
+	$post_like = get_content( 'post_like', $user_id )[0]['post_like'];
+
+	// If post_like empty => insert
+	if ( empty( $post_like ) ) {
+		return false;
+	}
+
+	$post_like = explode( ',', $post_like );
+
+	// if user has liked this post => unlike
+	if ( in_array( $post_id, $post_like ) ) {
+		return true;
+	} // else => like
+	else {
+		return false;
+	}
+}
+
+// Lấy tổng like của post
+function get_count_like( $post_id ) {
+	$count_like = get_content( "count_like", $post_id )[0]['count_like'];
+
+	if ( empty( $count_like ) ) {
+		return "Hãy là người đầu tiên thích bài đăng này";
+	}
+
+	return $count_like . ' lượt thích';
+}
+
+// Update post count like
+function update_post_count_like($post_id, $index){
+	global $conn;
+	connect_db();
+
+	$sql = "UPDATE posts SET count_like = count_like + '$index' WHERE postID = '$post_id'";
+
+	// Thực hiện câu truy vấn
+	$query = mysqli_query( $conn, $sql );
+
+	return $query;
 }
 
 // Hàm lấy header

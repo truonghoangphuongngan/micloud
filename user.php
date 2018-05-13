@@ -48,6 +48,14 @@ if ( isset( $_POST['comment'] ) ) {
 	insert_comment( $_POST['post_id'], $user_id, $comment );
 }
 
+/**
+ * Like function
+ */
+// Neu nhan duoc like
+if ( isset( $_POST['post_like'] ) ) {
+	action_like( $_POST['post_like'], $user_id );
+}
+
 ?>
 <?php get_header(); ?>
     <!-- thông tin-->
@@ -134,16 +142,29 @@ if ( isset( $_POST['comment'] ) ) {
                                     </div>
 
                                     <!-- Like -->
-                                    <div><i class="fa fa-heart-o fa-2x text-danger" aria-hidden="true"></i></div>
+                                    <section class="like-function">
+                                        <?php
+                                        $like_button = '<i class="fa fa-heart-o fa-2x" aria-hidden="true" title="Like"></i>';
+                                        $unlike_button = '<i class="fa fa-heart fa-2x" aria-hidden="true" title="Unlike"></i>';
+                                        ?>
+                                        <form method="post" action="">
+                                            <button class="btn btn-link" type="submit"
+                                                    name="post_like" value="<?php echo $post['postID']; ?>">
+                                                <?php echo is_liked($post['postID'], $user_id) ? $unlike_button : $like_button;?>
+                                            </button>
+                                            <span><?php echo get_count_like($post['postID']);?></span>
+                                        </form>
+                                    </section>
 
                                     <!-- Comments -->
                                     <section class="comments">
-									<?php foreach ( get_comment_by_post_id( $post['postID'] ) as $comment ):; ?>
-                                        <div class="comment-line">
-                                            <span class="comment-user"><img src="<?php echo get_link_avatar( $comment['userID'] ); ?>"></span>
-                                            <span class="comment-content"><?php echo $comment['content']; ?></span>
-                                        </div>
-									<?php endforeach; ?>
+										<?php foreach ( get_comment_by_post_id( $post['postID'] ) as $comment ):; ?>
+                                            <div class="comment-line">
+                                                <span class="comment-user"><img
+                                                            src="<?php echo get_link_avatar( $comment['userID'] ); ?>"></span>
+                                                <span class="comment-content"><?php echo $comment['content']; ?></span>
+                                            </div>
+										<?php endforeach; ?>
                                     </section>
 
                                     <form method="post" action="">
@@ -163,6 +184,12 @@ if ( isset( $_POST['comment'] ) ) {
 
                         <!-- Modal footer -->
                         <div class="modal-footer">
+                            <form method="post" action="">
+                                <button class="btn btn-link" type="submit"
+                                        onclick="return confirm('Xóa bài đăng này?');"
+                                        name="delete_post" value="<?php echo $post['postID']; ?>">Xóa bài đăng
+                                </button>
+                            </form>
                             <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                         </div>
 
