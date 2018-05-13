@@ -2,7 +2,6 @@
 SESSION_START();
 include_once("functions.php");
 
-
 // Nếu người dùng submit form
 if (!empty($_POST['new_post']))
 {

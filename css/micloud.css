@@ -9,6 +9,14 @@
 }
 .hidden {display: none;}
 
+section.comments {padding:15px 0;}
+.comment-line {display:flex; align-items:center; padding:5px 0;}
+.comment-user {
+    display:inline-block; width:40px; height:40px; border-radius:50%; overflow:hidden;
+    margin-right:15px;
+}
+.comment-user img {width:100%}
+
 
 /*----------- nhu-------------*/
 .user_imgavatar{
@@ -16,7 +24,7 @@
     /* border-radius: 50%; */
     float: right;
     margin-right: 20%;
-    
+
 }
 .user_avatar{
     width: 400px;
@@ -30,7 +38,7 @@ label{
 .allbox{
     display: grid;
     grid-template-columns: 1fr 2fr;
-  }
+}
 .allbox input{
     width: 80%;
 }
@@ -48,15 +56,15 @@ main .container{
     position: relative;
     width: 100%;
     max-width: 400px;
-  }
-  
-  .post-photo {
+}
+
+.post-photo {
     display: block;
     width: 100%;
     height: auto;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -66,14 +74,14 @@ main .container{
     width: 100%;
     opacity: 0;
     transition: .3s ease;
-  
-  }
-  
-  .photo-wrapper:hover .overlay {
+
+}
+
+.photo-wrapper:hover .overlay {
     opacity: 1;
-  }
-  
-  .icon {
+}
+
+.icon {
     color: pink;
     font-size: 100px;
     position: absolute;
@@ -82,12 +90,11 @@ main .container{
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-  }
-  
-  .fa-user:hover {
-    color: #eee;
-  }
-  .photo-wrapper:hover .post-photo {
-    opacity: 0.3;
-  }
+}
 
+.fa-user:hover {
+    color: #eee;
+}
+.photo-wrapper:hover .post-photo {
+    opacity: 0.3;
+}

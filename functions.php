@@ -80,7 +80,7 @@ function search_user( $search ) {
 				$_SESSION['search_userID']   = $row['userID'];
 
 				$kq .= '<div class="card bg-primary"><div class="card-body">';
-				$kq .= '<a href="'.get_link_user($row['username']).'" class="text-white">' . $row['username'] . '</a>';
+				$kq .= '<a href="' . get_link_user( $row['username'] ) . '" class="text-white">' . $row['username'] . '</a>';
 				$kq .= '</div></div>';
 			}
 		}
@@ -145,6 +145,7 @@ function get_content( $command, $quantity ) {
 	global $conn;
 	connect_db();
 	switch ( $command ) {
+
 		case 'postuser':
 			$query = mysqli_query( $conn, "SELECT * FROM `posts` WHERE posts.userID = $quantity" );
 			break;
@@ -160,10 +161,14 @@ function get_content( $command, $quantity ) {
 		case 'search_user':
 			$query = mysqli_query( $conn, "SELECT * FROM `users` 
             WHERE users.username like '%$quantity%' or users.email like '%$quantity%' " );
+			break;
 
 		case 'post_user_following':
 			$query = mysqli_query( $conn, "SELECT * FROM `posts` WHERE userID IN ($quantity) ORDER BY created DESC" );
 			break;
+
+		case "comments":
+			$query = mysqli_query( $conn, "SELECT * FROM `comments` WHERE comments.postID = '$quantity' ORDER BY created ASC" );
 			break;
 
 		default:
@@ -179,8 +184,6 @@ function get_content( $command, $quantity ) {
 		}
 	} else {
 		die( "error " . $command );
-		header( "Location: thong_bao/ko_xac_dinh_noi_dung" );
-		exit;
 	}
 
 	return $result;
@@ -201,15 +204,15 @@ function get_link_avatar( $userID = null ) {
 	}
 
 	// Get user data
-	$user   = get_content( 'userbyID', $userID );
+	$user = get_content( 'userbyID', $userID );
 
 	$avatar = $user[0]['avatar'];
 
-	return get_link_photo($avatar);
+	return get_link_photo( $avatar );
 }
 
-function get_link_photo($photo_name){
-	return "images/upload/".$photo_name;
+function get_link_photo( $photo_name ) {
+	return "images/upload/" . $photo_name;
 }
 
 //update thông tin user
@@ -306,16 +309,17 @@ function new_post( $description, $tags, $photo, $userID ) {
 }
 
 // Hàm upload hình
-
 function upload_img() {
 	// lấy tên file upload
 	date_default_timezone_set( 'Asia/Ho_Chi_Minh' );
 	$time  = date( "Ymd_His" );
 	$image = $_FILES['photo']['name'];
+
 	// Lấy tên gốc của file
 	$filename = stripslashes( $_FILES['photo']['name'] );
 	$filetype = $_FILES['photo']['type'];
 	$file_tmp = $_FILES['photo']['tmp_name'];
+
 	//Lấy phần mở rộng của file
 	// $explore = explode ('.',$filename); //chia chuoi bang '.'
 	//$ext = end($explore);
@@ -325,8 +329,10 @@ function upload_img() {
 	/*----------UPLOADING----------*/
 	// đặt tên mới cho file hình up lên
 	$image_name = $filename;
+
 	// gán thêm cho file này đường dẫn
 	$newname = $_SERVER["DOCUMENT_ROOT"] . '/micloud/images/upload/' . $image_name;
+
 	//nếu ko có lỗi xảy ra->> tiếp tục upload
 	if ( move_uploaded_file( $file_tmp, $newname ) ) {
 
@@ -344,7 +350,7 @@ function follow_friend( $username_follow ) {
 
 	// Lay danh sach follow cua user
 	$my_username = $_SESSION['username'];
-	$query  = mysqli_query( $conn, "SELECT `follow` FROM `users` WHERE users.username = '$my_username'" );
+	$query       = mysqli_query( $conn, "SELECT `follow` FROM `users` WHERE users.username = '$my_username'" );
 
 	// Danh sach nguoi ma minh follow
 	$result_string = '';
@@ -357,20 +363,21 @@ function follow_friend( $username_follow ) {
 	}
 
 	// Tach chuoi follow thanh mang
-	$result_array = explode(",",$result_string);
+	$result_array = explode( ",", $result_string );
 
 	// Loop de so sanh xem follow hay chua ---------------------- CHUA XONG
-	foreach ($result_array as $user_name){
+	foreach ( $result_array as $user_name ) {
 
 		// If $user_name = $username_follow => minh follow roi => thoat ham
-		if($user_name == $username_follow){
-			mi_print($user_name.' == '.$username_follow);
+		if ( $user_name == $username_follow ) {
+			mi_print( $user_name . ' == ' . $username_follow );
+
 			return;
 		}
 	}
 
 	// Them follow
-	$result_string .= $username_follow.',';
+	$result_string .= $username_follow . ',';
 
 	// Save follow
 	$sql = "UPDATE users SET follow = '$result_string' WHERE users.username = '$my_username'";
@@ -378,10 +385,10 @@ function follow_friend( $username_follow ) {
 	// Thực hiện câu truy vấn
 	$query = mysqli_query( $conn, $sql );
 
-	if($query){
-		mi_print("Follow thanh cong");
+	if ( $query ) {
+		mi_print( "Follow thanh cong" );
 	} else {
-		mi_print("Follow that bai");
+		mi_print( "Follow that bai" );
 	}
 }
 
@@ -417,17 +424,24 @@ function get_post_following( $userID ) {
 }
 
 // hàm insert comment vào 1 bài post
-function insert_comment($idPost,$idUser,$comment){
+function insert_comment( $idPost, $idUser, $comment ) {
 	global $conn;
 	connect_db();
+
 	// Câu truy vấn thêm
 	$sql = "
             INSERT INTO `comments`( `created`, `content`, `postID`, `userID`) VALUES (NOW(),'$comment','$idPost','$idUser')
     ";
+
 	// Thực hiện câu truy vấn
 	$query = mysqli_query( $conn, $sql );
-	return ($query);
-	die( "Fail" );
+
+	return ( $query );
+}
+
+// Hàm lấy comment thuộc post_id
+function get_comment_by_post_id( $post_id ) {
+	return get_content( "comments", $post_id );
 }
 
 // Hàm lấy header
@@ -439,8 +453,8 @@ function get_footer() {
 	echo file_get_contents( "footer.php" );
 }
 
-function get_link_user($username){
-	return "/micloud/user.php?username=".$username;
+function get_link_user( $username ) {
+	return "/micloud/user.php?username=" . $username;
 }
 
 
