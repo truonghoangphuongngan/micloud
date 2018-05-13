@@ -4,5 +4,90 @@
     height:300px;
 }
 .photo-wrapper img {display:none;}
-
+.photo-wrapper:hover {
+    opacity: 0.5;
+}
 .hidden {display: none;}
+
+
+/*----------- nhu-------------*/
+.user_imgavatar{
+    width: 40%;
+    /* border-radius: 50%; */
+    float: right;
+    margin-right: 20%;
+    
+}
+.user_avatar{
+    width: 400px;
+}
+.card-group{
+    margin: 30px 0;
+}
+label{
+    font-weight: bold;
+}
+.allbox{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+.allbox input{
+    width: 80%;
+}
+main .container{
+    background-color: #FFF5EE;
+    padding:10px;
+}
+.container{
+    padding:0;
+}
+.post{
+    margin:100px;
+}
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .post-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+  
+  }
+  
+  .photo-wrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .icon {
+    color: pink;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .fa-user:hover {
+    color: #eee;
+  }
+  .photo-wrapper:hover .post-photo {
+    opacity: 0.3;
+  }
+

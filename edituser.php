@@ -1,7 +1,29 @@
 <?php
 SESSION_START();
 include_once("functions.php");
-include_once("link-ref.php");
+// Neu ko lay duoc username
+$username  = '';
+$user_id   = 0;
+$is_friend = false;
+if ( ! isset( $_GET['username'] ) ) {
+
+	// Tra ve trang ca nhan cua minh
+	$username = $_SESSION['username'];
+	$user_id  = $_SESSION['userID'];
+
+} else {
+	// tra ve trang cua username
+
+	$is_friend = true;
+
+	$username = $_GET['username'];
+
+	$user_data = get_content( 'user_by_username', $username );
+
+	$user_id = $user_data[0]['userID'];
+}
+$posts = get_content( 'postuser', $user_id );
+
 
 if(isset($_SESSION['userID'])){
     $username = $_SESSION['username'];
@@ -54,6 +76,7 @@ if(isset($_SESSION['userID'])){
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
 <!-- header-->
 <?php get_header();?>
@@ -61,83 +84,50 @@ if(isset($_SESSION['userID'])){
 
 <br>
 <div class="container">
-  <div class="card bg-light text-dark">
     <div class="card-body">
       <form class="form-horizontal" method="post" enctype = "multipart/form-data">
+      <div class="allbox">
           <!-- avatar -->
-        <div class="form-group">
-          <div class="card-body text-center">
-                <div class="card" style="width:30%" title="Thay đổi ảnh đại diện">
-                    <img class="card-img-top" src="images/upload/<?php get_link_avatar(); ?>" alt="Card image">
-                    
-                </div>
- 
+          <div style="margin-right:5%;" class="form-group">
+            <div class="card" title="Thay đổi ảnh đại diện">
+              <img class="card-img-top" src="<?php echo get_link_avatar( $user_id ); ?>" alt="Card image">                   
+            </div>
+            <div><label for="avatar">Chọn hình đại diện:</label></div>
+            <div><input type="file" class="form-control btn btn-default" id="photor" name="photo"></div>
+            <input type="submit" class="btn btn-outline-danger" value="Cập nhật ảnh mới" name="update_avatar">
           </div>
-        </div>
-        <!-- HÌNH ẢNH -->
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="avatar">Chọn hình đại diện</label>
-          <div class="col-sm-8">
-            <input type="file" class="form-control btn btn-default" id="photor" name="photo">
+          <!-- info -->
+          <div class="form-group">
+            <h2><?php echo $username; ?></h2>
+            <!-- fullname -->
+            <div>
+              <label for="fullname">Tên đầy đủ:</label>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Điền tên vào đây" maxlength="30" value="<?php echo $user[0]['fullname']; ?>">
+            </div>
+            <!-- email -->
+            <div>
+              <label for="email">Email:</label>
+              <div>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Điền email" maxlength="30" value="<?php echo $user[0]['email']; ?>">
+              </div>
+            </div>
+            <!-- password -->
+            <div>
+              <label for="userpass">Password:</label>
+              <div>
+                <input type="password" class="form-control" id="userpass" name="userpass" placeholder="Điền password mới" maxlength="30" value="<?php ?>">
+              </div>
+            </div>
+            </div>
           </div>
-        </div>
-        <!-- SUBMIT -->
-        <div class="form-group"> 
-          <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit" class="btn btn-outline-danger" value="Cập nhật" name="update_avatar">
+          <!-- SUBMIT -->
+          <div style="text-align:right;" class="form-group"> 
+              <input type="submit" class="btn btn-outline-danger" value="Cập nhật" name="update">
           </div>
-        </div>
+      </div>
       </form>
-
-    </div>
   </div>
   <br>
-
-  <div class="card bg-light text-dark">
-    <div class="card-body">
-      <form class="form-horizontal" method="post" enctype = "multipart/form-data">
-        <!-- username -->
-        <div class="form-group">
-        <div> <h2> <?php echo $username; ?></h2></div>
-        </div>
-        <!-- fullname -->
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="fullname">Tên đầy đủ:</label>
-          <div class="col-sm-8">
-            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Điền tên vào đây" maxlength="30" value="<?php echo $user[0]['fullname']; ?>">
-          </div>
-        </div>
-        <!-- email -->
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="email">Email:</label>
-          <div class="col-sm-8">
-            <input type="email" class="form-control" id="email" name="email" placeholder="Điền email" maxlength="30" value="<?php echo $user[0]['email']; ?>">
-          </div>
-        </div>
-        <!-- password -->
-        <div class="form-group">
-          <label class="control-label col-sm-2" for="userpass">Password:</label>
-          <div class="col-sm-8">
-            <input type="password" class="form-control" id="userpass" name="userpass" placeholder="Điền password mới" maxlength="30" value="<?php ?>">
-          </div>
-        </div>
-        
-      <!-- SUBMIT -->
-        <div class="form-group"> 
-          <div class="col-sm-offset-2 col-sm-10">
-            <input type="submit" class="btn btn-outline-danger" value="Cập nhật" name="update">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-
-
-
-  
-
-
 </div>
 </body>
 </html>

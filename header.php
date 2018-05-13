@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Micloud</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +19,11 @@
     <!-- my css -->
     <link rel='stylesheet' type='text/css' href='css/micloud.css'>
 
+    <!-- icon -->
+    <link rel="shortcut icon" href="images/cloud.png">   
+
 </head>
+
 
 <body>
 
@@ -27,31 +31,28 @@
 <!-- header -->
 <header>
     <div class="container">
-        <nav class="navbar navbar-expand-sm bg-secondary text-white navbar-dark d-flex justify-content-around">
+        <nav class="navbar alert alert-danger d-flex justify-content-around">
             <!-- Brand/logo -->
             <div>
-                <a class="navbar-brand" href="#">
-                    <img src="images/icon.png" alt="logo" style="width:40px;">
+                <a class="navbar-brand" href="index.php">
+                    <img src="images/cloud.png" alt="logo" style="width:40px;">
                 </a>
-                <a class="navbar-brand" href="#">
-                    <h>Micloud</h>
+                <a class="navbar-brand" href="index.php">
+                    <h class="text-danger text-monospace">Micloud</h>
                 </a>
             </div>
 
             <nav class="navbar navbar-expand-sm">
                 <form class="form-inline" action="result_search.php" method="get">
-                    <input class="form-control mr-sm-2" type="text" id="search" name="search" placeholder="Search">
+                    <input class="form-control mr-sm-2 text-danger" type="text" id="search" name="search" placeholder="Search...">
                     <button class="btn btn-outline-danger" type="submit" id="submit_search">Tìm kiếm</button>
 
                 </form>
             </nav>
             <br>
             <div>
-                <a class="navbar-brand" href="#">
-                    <img src="images/ring.png" alt="logo" style="width:40px;">
-                </a>
-                <a class="navbar-brand" href="user.php">
-                    <img src="images/user.png" alt="logo" style="width:40px;">
+                <a class="navbar-brand text-danger" href="user.php">
+                    <i class="fa fa-user-circle fa-2x " aria-hidden="true"></i>
                 </a>
             </div>
         </nav>

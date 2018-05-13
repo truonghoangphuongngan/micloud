@@ -1,7 +1,7 @@
 <?php 
 SESSION_START();
 include_once("functions.php");
-include_once("link-ref.php");
+
 
 // Nếu người dùng submit form
 if (!empty($_POST['new_post']))
@@ -34,14 +34,13 @@ disconnect_db();
 <?php get_header();?>
 <br>
 
-<div class="container">
-<div class="card bg-light text-dark">
+
 <form class="form-horizontal" method="post" enctype = "multipart/form-data">
 	<!-- Mô tả -->
   <div class="form-group">
     <label class="control-label col-sm-2" for="description"></label>
     <div class="col-sm-8">
-      <textarea class="form-control" id="description" name="description" rows="5" placeholder="Cập nhật trạng thái" maxlength="1000" required></textarea>
+      <textarea class="form-control" id="description" name="description" rows="5" placeholder="Cập nhật trạng thái..." maxlength="1000" required></textarea>
     </div>
   </div>
   <!-- Hagtag -->
@@ -67,7 +66,5 @@ disconnect_db();
   </div>
 </form>
 
-</div>
-</div>
 </body>
 </html>

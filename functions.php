@@ -427,3 +427,5 @@ function get_footer() {
 function get_link_user($username){
 	return "/micloud/user.php?username=".$username;
 }
+
+

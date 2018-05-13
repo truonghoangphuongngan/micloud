@@ -3,8 +3,6 @@ SESSION_START();
 include_once("functions.php");
 
 
-
-
 ?>
 
 <?php get_header();?>
@@ -23,5 +21,6 @@ if (!empty($_GET['search'])) {
     }
 }
 ?>
+
 
 <?php get_footer();?>
