@@ -179,7 +179,7 @@ if ( isset( $_POST['post_like'] ) ) {
 
                                     <form method="post" action="">
                                         <div class="form-group">
-                                            <textarea class="form-control" rows="2" name="comment"
+                                            <textarea minlength="20" class="form-control" rows="2" name="comment"
                                                       placeholder="Thêm bình luận ..."></textarea>
                                             <input class="hidden" name="post_id" value="<?php echo $post['postID']; ?>">
                                             <button type="submit" class="btn btn-primary">Gửi</button>

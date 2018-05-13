@@ -94,7 +94,6 @@ function search_user( $search ) {
 	}
 }
 
-
 // Hàm thêm USER
 function add_user( $username, $userpass, $fullname, $email, $gender, $role, $avatar ) {
 	// Gọi tới biến toàn cục $conn
@@ -589,5 +588,3 @@ function get_footer() {
 function get_link_user( $username ) {
 	return "/micloud/user.php?username=" . $username;
 }
-
-
