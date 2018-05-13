@@ -156,7 +156,7 @@ if ( isset( $_POST['post_like'] ) ) {
                                         <form method="post" action="">
                                             <button class="btn btn-link" type="submit"
                                                     name="post_like" value="<?php echo $post['postID']; ?>">
-												<?php echo is_liked( $post['postID'], $user_id ) ? $unlike_button : $like_button; ?>
+												<?php echo is_liked( $post['postID'], $_SESSION['userID'] ) ? $unlike_button : $like_button; ?>
                                             </button>
                                             <span><?php echo get_count_like( $post['postID'] ); ?></span>
                                         </form>

@@ -141,13 +141,17 @@ function add_user( $username, $userpass, $fullname, $email, $gender, $role, $ava
 }
 
 // hàm lấy nội dung bài post
-function get_content( $command, $quantity ) {
+function get_content( $command, $quantity = '' ) {
 	global $conn;
 	connect_db();
 	switch ( $command ) {
 
 		case 'postuser':
 			$query = mysqli_query( $conn, "SELECT * FROM `posts` WHERE posts.userID = $quantity" );
+			break;
+
+		case "all_posts":
+			$query = mysqli_query( $conn, "SELECT * FROM `posts` ORDER BY postID DESC" );
 			break;
 
 		case 'userbyID':

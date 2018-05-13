@@ -9,7 +9,7 @@ if (!empty($_POST['new_post']))
     $data['photo'] = upload_img();
     if($data['photo'] == 'fail') {echo "upload image fail";}
     $data['description'] = $_POST['description'];
-    $data['tags'] = $_POST['tags'];
+    $data['tags'] = '';
     $userID = $_SESSION['userID'];
    
 
@@ -43,12 +43,12 @@ disconnect_db();
     </div>
   </div>
   <!-- Hagtag -->
-  <div class="form-group">
+  <!--<div class="form-group">
     <label class="control-label col-sm-2" for="tags">Hagtag:</label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="tags" name="tags" placeholder="Điền từ khóa (Vd: Balo Mikkor, Mikkor black, Mikkor siêu rẻ, Mikkor chính hãng" maxlength="100" required>
     </div>
-  </div>
+  </div>-->
   <!-- HÌNH ẢNH -->
   <div class="form-group">
     <label class="control-label col-sm-2" for="photo">Chọn hình</label>

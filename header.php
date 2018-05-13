@@ -19,11 +19,13 @@
     <!-- my css -->
     <link rel='stylesheet' type='text/css' href='css/micloud.css'>
 
+    <!-- my js -->
+    <script src="js/micloud.js"></script>
+
     <!-- icon -->
-    <link rel="shortcut icon" href="images/cloud.png">   
+    <link rel="shortcut icon" href="images/cloud.png">
 
 </head>
-
 
 <body>
 
@@ -44,7 +46,8 @@
 
             <nav class="navbar navbar-expand-sm">
                 <form class="form-inline" action="result_search.php" method="get">
-                    <input class="form-control mr-sm-2 text-danger" type="text" id="search" name="search" placeholder="Search...">
+                    <input class="form-control mr-sm-2 text-danger" type="text" id="search" name="search"
+                           placeholder="Search...">
                     <button class="btn btn-outline-danger" type="submit" id="submit_search">Tìm kiếm</button>
 
                 </form>
