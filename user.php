@@ -2,6 +2,12 @@
 SESSION_START();
 include_once( "functions.php" );
 
+/**
+ * Delete function
+ */
+if ( isset( $_POST['delete_post'] ) ) {
+	delete_post( $_POST['delete_post'] );
+}
 
 /**
  * GET USER DATA
@@ -143,16 +149,16 @@ if ( isset( $_POST['post_like'] ) ) {
 
                                     <!-- Like -->
                                     <section class="like-function">
-                                        <?php
-                                        $like_button = '<i class="fa fa-heart-o fa-2x" aria-hidden="true" title="Like"></i>';
-                                        $unlike_button = '<i class="fa fa-heart fa-2x" aria-hidden="true" title="Unlike"></i>';
-                                        ?>
+										<?php
+										$like_button   = '<i class="fa fa-heart-o fa-2x" aria-hidden="true" title="Like"></i>';
+										$unlike_button = '<i class="fa fa-heart fa-2x" aria-hidden="true" title="Unlike"></i>';
+										?>
                                         <form method="post" action="">
                                             <button class="btn btn-link" type="submit"
                                                     name="post_like" value="<?php echo $post['postID']; ?>">
-                                                <?php echo is_liked($post['postID'], $user_id) ? $unlike_button : $like_button;?>
+												<?php echo is_liked( $post['postID'], $user_id ) ? $unlike_button : $like_button; ?>
                                             </button>
-                                            <span><?php echo get_count_like($post['postID']);?></span>
+                                            <span><?php echo get_count_like( $post['postID'] ); ?></span>
                                         </form>
                                     </section>
 

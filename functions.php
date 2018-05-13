@@ -197,6 +197,16 @@ function get_content( $command, $quantity ) {
 	return $result;
 }
 
+// Hàm xóa
+function delete_content( $table, $column, $id ) {
+	global $conn;
+	connect_db();
+
+	$query = mysqli_query( $conn, "DELETE FROM `$table` WHERE $table.$column = $id" );
+
+	return $query;
+}
+
 function mi_print( $value ) {
 	echo "<pre>";
 	print_r( $value );
@@ -314,6 +324,11 @@ function new_post( $description, $tags, $photo, $userID ) {
 		echo "loi";
 	}
 	die( "Unable to execute function new_posst!" ); // Print a message and exit the current script
+}
+
+// delete post
+function delete_post( $post_id ) {
+	return delete_content( "posts", "postID", $post_id );
 }
 
 // Hàm upload hình
@@ -477,7 +492,7 @@ function action_like( $post_id, $user_id ) {
 
 		//mi_print( "liked the first time" );
 
-		update_post_count_like($post_id, 1);
+		update_post_count_like( $post_id, 1 );
 
 		return update_like( $post_id, $user_id );
 	}
@@ -494,7 +509,7 @@ function action_like( $post_id, $user_id ) {
 		}
 
 		//mi_print( "unliked" );
-		update_post_count_like($post_id, -1);
+		update_post_count_like( $post_id, - 1 );
 
 		return update_like( $new_post_like, $user_id );
 	} // else => like
@@ -507,7 +522,7 @@ function action_like( $post_id, $user_id ) {
 		$post_like = arrayToString( $post_like );
 
 		//mi_print( "liked" );
-		update_post_count_like($post_id, 1);
+		update_post_count_like( $post_id, 1 );
 
 		return update_like( $post_like, $user_id );
 	}
@@ -546,7 +561,7 @@ function get_count_like( $post_id ) {
 }
 
 // Update post count like
-function update_post_count_like($post_id, $index){
+function update_post_count_like( $post_id, $index ) {
 	global $conn;
 	connect_db();
 
